@@ -3,13 +3,44 @@
     height: 93vh;
     background-color: aqua;
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.asideL {
+    width: 25%;
+    height: 93vh;
+    background-color: chartreuse;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.asideL {
+.div_center{
+    width: 50%;
+    height: 93vh;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .div_img{
+        width: 480px;
+        height: 480px;
+        background-color: chocolate;
+        border-radius: 50%;
+    }
+}
+
+.asideR {
     width: 25%;
-    height: 75vh;
-    background-color: chartreuse;
+    height: 93vh;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }

@@ -9,6 +9,16 @@ export default function Hero(){
 
                 <button className={Style.icons}>Github</button>
                 <button className={Style.icons}>Linkedin</button>
+                <button className={Style.icons}>Instagram</button>
+            </aside>
+
+            <div className={Style.div_center}>
+                <div className={Style.div_img}></div>
+            </div>
+
+            <aside className={Style.asideR}>
+                <p>Eu crio softwares e amo oque faço</p>
+                <h1>Desenvolvedor Web</h1>
             </aside>
         </section>
     )
