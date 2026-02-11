@@ -10,7 +10,9 @@
 }
 
 span{
-        color: #23C7C7;
+        background: -webkit-linear-gradient(#7F35AA, #2FC3E4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
 .Nav {

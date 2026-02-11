@@ -3,7 +3,7 @@ import Style from '../Nav/Nav.module.css'
 export default function Nav() {
     return(
         <header className={Style.header_nav}>
-            <h1><span>L</span>ero</h1>
+            <h1><span className={Style.span_gradiente}>L</span>ero</h1>
             <nav className={Style.Nav}>
             <a href="#Hero">Home</a>
             <a href="#">Sobre</a>
