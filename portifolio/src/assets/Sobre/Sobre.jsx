@@ -1,8 +1,8 @@
 import Style from '../Sobre/Sobre.module.css'
 import { CodeXml, Palette, Rocket, Zap } from 'lucide-react';
 
-export default function Sobre(){
-        return(
+export default function Sobre() {
+    return (
         <section className={Style.section_sobre}>
             <div className={Style.infos}>
                 <p className={Style.sobre}>Sobre mim</p>
@@ -47,5 +47,5 @@ export default function Sobre(){
                 </div>
             </div>
         </section>
-        )
-    }
+    )
+}

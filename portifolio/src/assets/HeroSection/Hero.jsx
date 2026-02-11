@@ -1,7 +1,8 @@
 import Style from '../HeroSection/Hero.module.css'
+import { Github, Linkedin, Instagram, Twitter } from 'lucide-react';
 
-export default function Hero(){
-    return(
+export default function Hero() {
+    return (
         <section className={Style.section_hero}>
             <aside className={Style.asideL}>
                 <h1>Olá! Meu nome é <span>Leonardo</span></h1>
@@ -22,5 +23,5 @@ export default function Hero(){
             </aside>
         </section>
     )
-    
+
 }
