@@ -1,4 +1,4 @@
-.header_nav{
+.header_nav {
     width: 100%;
     height: 60px;
     background-color: cadetblue;
@@ -7,24 +7,97 @@
     justify-content: space-evenly;
     align-items: center;
     color: white;
+    position: relative;
 }
 
-span{
-        background: -webkit-linear-gradient(#7F35AA, #2FC3E4);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;   
-    }
+.logo {
+    z-index: 100;
+}
+
+.span_gradiente {
+    background: -webkit-linear-gradient(#7F35AA, #2FC3E4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .Nav {
-    background-color: white;
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
+    gap: 20px;
 }
 
+.Nav a {
+    color: white;
+    text-decoration: none;
+}
 
-.curriculo_buttom{
+.curriculo_buttom {
     width: 180px;
     height: 40px;
     background-color: #23C7C7;
     color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.curriculo_buttom_mobile {
+    display: none;
+}
+
+/*Menu hamburguer no tamanho do monitor*/
+.menu_icon {
+    display: none;
+    z-index: 110;
+}
+
+@media (max-width: 768px) {
+    .header_nav {
+        justify-content: space-between;
+        padding: 0 20px; 
+    }
+
+    .menu_icon {
+        display: block;
+    }
+
+    .curriculo_buttom {
+        display: none; 
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .Nav {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: cadetblue;
+        padding: 20px 0;
+    }
+
+    .Nav_aberto {
+        display: flex; /* Mostra quando isOpen for true */
+    }
+
+    .Nav a {
+        padding: 15px 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .curriculo_buttom_mobile {
+        display: block;
+        width: 160px;
+        height: 40px;
+        margin: 20px 0 0 30px;
+        background-color: #23C7C7;
+        color: white;
+        border: none;
+    }
 }
