@@ -12,6 +12,11 @@ function App() {
       <Nav />
       <Hero />
       <Sobre />
+      <Skills />
+      <Projetos />
+      <Contato />
+      <Footer /> 
+
       
     </main>
 

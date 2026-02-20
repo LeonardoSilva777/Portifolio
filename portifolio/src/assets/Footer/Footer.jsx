@@ -11,13 +11,13 @@ export default function Footer() {
                 </div>
                 <div className={Style.redes}>
                     <a href="#">
-                        <Github color="#7F35AA" size={28} />
+                        <Github color="rgb(255, 255, 255)" size={28} />
                     </a>
                     <a href="#">
-                        <Linkedin color="#7F35AA" size={28} />
+                        <Linkedin color="rgb(255, 255, 255)" size={25} />
                     </a>
                     <a href="#">
-                        <Instagram color="#7F35AA" size={28} />
+                        <Instagram color="rgb(255, 255, 255)" size={28} />
                     </a>
                     
                 </div>
@@ -25,11 +25,11 @@ export default function Footer() {
 
             <div className={Style.links}>
                 <h2>Links Rapidos</h2>
-                <a href="#">Home</a>
-                <a href="#">Sobre</a>
-                <a href="#">Projetos</a>
-                <a href="#">Skills</a>
-                <a href="#">Contato</a>
+                <a href="#Home">Home</a>
+                <a href="#Sobre">Sobre</a>
+                <a href="#Projetos">Projetos</a>
+                <a href="#Skills">Skills</a>
+                <a href="#Contato">Contato</a>
             </div>
 
             <div className={Style.contatos}>

@@ -1,51 +1,192 @@
 .Skills_page{
     width: 100%;
-    height: 93vh;
-    background-color: lightgreen;
+    height: 100vh;
+    background-color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.infos {
+.info{
     width: 100%;
-    height: 21vh;
-    background-color: azure;
+    height: 170px;
+    background-color: white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-
-
-    .sobre{
-        width: 130px;
-        height: 50px;
-        background-color: blue;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-        border-radius: 300px;
-    }
+    gap: 20px;
+    padding: 20px 0 5px 0;
 }
 
+.sobre{
+    width: 150px;
+    height: 20vh;
+    background: linear-gradient(130deg, #ffffff 50%, hsl(185, 83%, 81%) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
 
 .categorias{
     width: 100%;
-    height: 75vh;
-    background-color: lightseagreen;
+    height: 81vh;
+    background-color: white;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 30px;
+    
+
 }
 
-.Skills_geral{
-    width: 29%;
-    height: 40vh;
-    background-color: lightsalmon;
+.skill {
+    width: 40%;
+    height:  35vh; /* Mudado para min-height para evitar cortes */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
 
-    h1{
-        font-size: 30px;
+        h2 {
+            color: #7F35AA;
+            margin-bottom: 10px;
+        }
+}
+
+
+progress {
+    width: 100%; 
+    height: 12px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+
+}
+
+/* Fundo da barra (parte cinza clara) */
+progress::-webkit-progress-bar {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+/* Parte preenchida da barra */
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #7F35AA 0%, #E11D48 100%);
+    border-radius: 10px;
+    transition: width 0.5s ease;    
+}
+
+/* Ajuste para Firefox */
+progress::-moz-progress-bar {
+    background: linear-gradient(90deg, #7F35AA 0%, #E11D48 100%);
+    border-radius: 10px;
+
+}
+
+.skill_label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* ANIMAÇÃO: */
+@keyframes fillProgress {
+  from { width: 0%; }
+}
+
+
+@keyframes skillCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+
+.skill {
+  animation: skillCardReveal linear forwards;
+  animation-timeline: view();
+  animation-range: entry 5% cover 25%;
+}
+
+
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #7F35AA 0%, #E11D48 100%);
+  border-radius: 10px;
+  
+
+  animation: fillProgress linear forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
+}
+
+
+.info h1, .sobre {
+  animation: skillCardReveal linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 15%;
+}
+
+
+.skill {
+    width: 40%;
+    height: 35vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+
+    .Skills_page {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 50px;
+    }
+
+    .categorias {
+        flex-direction: column; 
+        height: auto;          
+        padding: 20px 0;
+        gap: 40px;              
+    }
+
+    
+    .skill {
+        width: 85%;            
+        height: auto;          
+        padding: 25px;      
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+
+        .h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+    
+    progress {
+        width: 100%;
+        margin-bottom: 15px;
     }
 }

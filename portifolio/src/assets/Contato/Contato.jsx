@@ -4,56 +4,69 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 export default function Contato() {
     return (
         <section className={Style.contatos_page}>
+            <header className={Style.information}>
+                <div className={Style.sobre}>Contato</div>
+                <h1>Vamos <span className={Style.span_gradiente}>Conversar?</span></h1>
+                <p>Se estiver interessado em fazer um projeto ou trabalho, porfavor entre em contato!</p>
+            </header>
 
-            {/*Informações da Pagina*/}
-            <div className={Style.infos}>
-                <p className={Style.sobre}>Contato</p>
-                <h1>Vamos <span className={Style.span_gradiente}>Conversar</span></h1>
-                <p className={Style.subTitulo}>Ferramentas e tecnologias que domino para criar soluções completas.</p>
-            </div>
+            <section className={Style.formas_contato}>
+                <div className={Style.contatos}>
+                    <section className={Style.option}>
+                        <h2>Informações de Contato</h2>
+                        <div className={Style.tipos}>
+                            <div className={Style.icon}>
+                                <Mail color="#7e22ce" size={28} />
+                            </div>
 
-            {/*informações de entrar em contato*/}
-            <section className={Style.forma_contato}>
-                <aside className={Style.opcao_contato}>
-                    <div className={Style.formas_contato}>
-                        <h1>Informações de contato</h1>
-                        <div className={Style.contato}>
-                            <Mail color="#7F35AA" size={28} />
-                            <p>Email: </p>
-                            <p>leonardop.silva1622@gmail.com</p>
+                            <div className={Style.texto_contato}>
+                                <h3>Email</h3>
+                                <p>leonardop.silva1622@gmail.com</p>
+                            </div>
                         </div>
-                        <div className={Style.contato}>
-                            <Phone color="#7F35AA" size={28} />
-                            <p>Whatsapp: </p>
-                            <p>(11) 93390-0779</p>
+                        <div className={Style.tipos}>
+                            <div className={Style.icon}>
+                                <Phone color="#9432cd" size={28} />
+                            </div>
+                            <div className={Style.texto_contato}>
+                                <strong>Telefone:</strong>
+                                <p> (11) 93390-0779</p>
+                            </div>
                         </div>
-                        <div className={Style.contato}>
-                            <MapPin color="#7F35AA" size={28} />
-                            <p>Localização: </p>
-                            <p>São Paulo - SP</p>
+                        <div className={Style.tipos}>
+                            <div className={Style.icon}>
+                                <MapPin color="#9432cd" size={28} />
+                            </div>
+                            <div className={Style.texto_contato}>
+                                <strong>Localização:</strong>
+                                <p> São Paulo - SP/ZL</p>
+                            </div>
                         </div>
-                    </div>
-                </aside>
+                    </section>
 
-                {/*Preenchimento do Formulario*/}
-                <aside className={Style.formulario}>
-                    <form action="" className={Style.desgin_form}>
-                        <label htmlFor="nome">Nome</label>
-                        <input type="text" id="nome" placeholder="Seu nome" className={Style.input} />
+                    <article className={Style.proposta}>
+                        <h1>Disponibilidade</h1>
+                        <p>Atualmente disponível para projetos freelance e oportunidades full-time.</p>
+                    </article>
+                </div>
 
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email" placeholder="seu@email.com" className={Style.input} />
+                <div className={Style.formulario}>
+                    <Mail color="#22bdce" size={40} />
+                    <h1>Formulario</h1>
+                    <p>Um formulario para você enviar uma mensagem!</p>
+                        <form action="https://formsubmit.co/leonardop.silva1622@gmail.com" method="POST" className={Style.area_forms}>
+                            <strong>Nome:</strong>
+                            <input type="text" name="name" required placeholder="Seu Nome"></input>
+                            <strong>Email:</strong>
+                            <input type="email" name="email" required placeholder="Endereço de e-mail"></input>
+                            <strong>Mensagem: </strong>
+                            <textarea name="message" placeholder="Mensagem"></textarea>
+                            <input type="hidden" name="_captcha" value="false"></input>
+                            <input type="hidden" name="_next" value=""></input>
 
-                        <label htmlFor="mensagem">Mensagem</label>
-                        <textarea id="mensagem" placeholder="Como posso ajudar?" className={Style.texto}></textarea>
-
-                    </form>
-
-
-                    <button type="submit" className={Style.btn_enviar}>
-                        Enviar Mensagem
-                    </button>
-                </aside>
+                            <button type="submit">Enviar</button>
+                        </form>
+                </div>
             </section>
 
         </section>

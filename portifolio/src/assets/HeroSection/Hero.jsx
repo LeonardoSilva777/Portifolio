@@ -1,38 +1,59 @@
 import Style from '../HeroSection/Hero.module.css'
-import { Github, Linkedin, Instagram } from 'lucide-react';
-import Corpo from '../../assets/HeroSection/img/Corpo2.jpg'
-import Cabeca from '../../assets/HeroSection/img/Cabeca2.png'
-import MinhaFoto from '../../assets/HeroSection/img/MinhaFoto.jpg'
+import {
+    Github,
+    Linkedin,
+    Instagram,
+    Sparkles,
+    CodeXml,
+    Zap,
+    Layers
+} from 'lucide-react';
+
 
 export default function Hero() {
     return (
         <section className={Style.section_hero}>
-            <aside className={Style.asideL}>
-                <h1>Olá! Meu nome é <span>Leonardo</span></h1>
-                <h2><span>03 </span>Anos</h2>
-                <div className={Style.class_ICons}>
-                    <a href="https://github.com/LeonardoSilva777" className={Style.icons} target="_blank" rel="noreferrer">
-                        <Github color="#7F35AA" size={38} />
-                    </a>
-                    <a href="https://www.linkedin.com/in/devleonardosilva/" className={Style.icons} target="_blank" rel="noreferrer">
-                        <Linkedin color="#7F35AA" size={38} />
-                    </a>
-                    <a href="https://www.instagram.com/leroo_leo/" className={Style.icons} target="_blank" rel="noreferrer">
-                        <Instagram color="#7F35AA" size={38} />
-                    </a>
-                </div>
+            <div className={Style.proposta}>
+                <Sparkles color="#7e22ce" size={25} />
+                <p>Disponivel para novos projetos</p>
+            </div>
 
-            </aside>
-            <div className={Style.div_center}>
-                <div className={Style.div_img}>
-                    <img src={MinhaFoto} alt="Leonardo Pereira da Silva" className={Style.minhafoto} />
+            <div className={Style.text}>
+                <h1>Ola Meu nome é <span>Leonardo</span></h1>
+                <p>Sou estudante de ciência da computação apaixonado por tecnologia e em aprender!</p>
+
+            </div>
+
+
+            <div className={Style.tecnologias}>
+                <div className={Style.categorias1} data-tech="React">
+                    <CodeXml color="#7e22ce" size={48} />
+                </div>
+                <div className={Style.categorias2} data-tech="Java">
+                    <Zap color="#14ccf9" size={48} />
+                </div>
+                <div className={Style.categorias3} data-tech="SQL">
+                    <Layers color="#fb9f42" size={45} />
                 </div>
             </div>
 
-            <aside className={Style.asideR}>
-                <p>Eu crio softwares e amo oque faço</p>
-                <h1>Desenvolvedor Web</h1>
-            </aside>
+            <div className={Style.telas}>
+                <button className={Style.projetos}>Ver Projetos</button>
+                <button className={Style.contato}>Entrar em contato</button>
+            </div>
+
+            <div className={Style.redes}>
+                <a href="https://github.com/seu-usuario" target="_blank" rel="noreferrer">
+                    <Github color="#7e22ce" size={35} />
+                </a>
+                <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noreferrer">
+                    <Linkedin color="#7e22ce" size={35} />
+                </a>
+                <a href="#" target="_blank" rel="noreferrer">
+                    <Instagram color="#7e22ce" size={35} />
+                </a>
+            </div>
+
         </section>
     )
 
