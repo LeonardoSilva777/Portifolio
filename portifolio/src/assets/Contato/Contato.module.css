@@ -1,11 +1,14 @@
 .contatos_page {
     width: 100%;
-    height: 93vh;
+    /* Alteração: Mudado de 93vh para auto para o conteúdo empurrar o footer */
+    height: auto !important; 
+    min-height: 100vh; /* Garante que a página ocupe a tela toda no mínimo */
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 15px;
+    padding-bottom: 60px; /* Espaço para não encostar no footer */
 }
 
 .span_gradiente {
@@ -15,70 +18,69 @@
     font-weight: bold;
 }
 
-.information{
+.information {
     width: 100%;
-    height: 15vh;
-    
+    min-height: 15vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
+    margin-bottom: 30px;
 
     .sobre {
         width: 160px;
         height: 38px;
-        background:  linear-gradient(135deg, #ffffff 0%, #caf9ff 100%); 
+        background: linear-gradient(135deg, #ffffff 0%, #caf9ff 100%); 
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 30px;
         color: #7F35AA;
-
-        
     }
 
-       
-
-        p{
-            color: #64748b;       
-            font-size: 1.1rem;
-        }
+    p {
+        color: #64748b;       
+        font-size: 1.1rem;
+        margin-top: 10px;
+    }
 }
 
-.formas_contato{
+.formas_contato {
     width: 100%;
-    height: 93vh;
+    /* Alteração: Mudado para auto para suportar o formulário */
+    height: auto !important; 
     background-color: white;
     display: flex;
     flex-direction: row;
+    justify-content: center; /* Centraliza as duas colunas */
+    gap: 20px;
 
-    .contatos{
-        width: 50%;
-        height: 80vh;
+    .contatos {
+        width: 45%;
+        /* Alteração: Removido 80vh fixo */
+        height: auto; 
         background-color: white;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        gap: 20px;
         align-items: center;
         text-align: start;
+        padding: 20px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
         border: 1px solid #f0f0f0; 
-        transition: all 0.3s ease;
-        cursor: pointer;
-
+        border-radius: 15px;
     }
 
     .option {
-        width: 90%;
+        width: 95%;
         height: auto; 
-        min-height: 40vh;
+        min-height: 120px; /* Reduzido para não ficar gigante no desktop */
         background-color: white;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 20px;
-        padding: 30px 15px;
+        gap: 15px;
+        padding: 20px;
         border-radius: 20px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         border: 1px solid #f0f0f0;
@@ -92,29 +94,20 @@
 
     .tipos {
         width: 100%;
-        height: 60px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 20px;
+        gap: 15px;
     }
 
     .icon {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
         background: linear-gradient(130deg, #ffffff 50%, hsl(185, 83%, 81%) 100%);
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 10px;
-        transition: background 0.3s ease;
-    }
-
-
-    .texto_contato {
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
+        border-radius: 12px;
     }
 
     .texto_contato h3 {
@@ -122,206 +115,110 @@
         font-weight: 700;
         color: #1a1a1a; 
         margin: 0;
-        padding: 0;
     }
 
     .texto_contato p {
         font-size: 13px;
         color: #64748b; 
-        margin: 2px 0 0 0;
-        padding: 0;
     }
-
 }
 
-.proposta{
-    width: 90%;
-    min-height: 13vh;
+.proposta {
+    width: 95%;
+    min-height: 100px;
     background: linear-gradient(160deg, #7F35AA 0%, #2FC3E4 100%);
     gap: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 10px;
+    padding: 20px;
     border-radius: 15px;
     color: white;
 
-    h1{
-        font: bold;
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 14px;
-    }
+    h1 { font-size: 20px; font-weight: bold; }
+    p { font-size: 14px; }
 }
 
-.formulario{
-    width: 50%;
-    height: 80vh;
+.formulario {
+    width: 45%;
+    /* Alteração: Removido 80vh fixo */
+    height: auto; 
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
     gap: 20px;
+    padding-bottom: 20px;
 
-    h1{
-        font-size: 40px;
-    }
-    p{
-        font-size: 20px;
-    }
+    h1 { font-size: 40px; }
+    p { font-size: 18px; color: #64748b; }
 }
 
-.area_forms{
-    width: 90%;
-    height: 55vh;
+.area_forms {
+    width: 95%;
+    height: auto;
+    padding: 30px 20px;
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 20px;
     gap: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    border: 1px solid #ffffff;
     border-radius: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-
-
-    input{
-        width: 95%;
-        height: 60px;
-        border: 0.2px solid black;
-        border-radius: 20px;
-        padding-left: 10px;
+    input, textarea {
+        width: 100%;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 15px;
+        font-family: inherit;
     }
 
-    textarea{
-        width: 95%;
-        height: 80px;
-        border: 1px solid black;
-        border-radius: 10px;
-        padding: 10px 0 0 10px;
-    }
+    input { height: 55px; }
+    textarea { height: 120px; resize: none; }
 
-    button{
-        width: 95%;
-        height: 60px;
+    button {
+        width: 100%;
+        height: 55px;
         background-color: #64748b;
-        border-radius: 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
     }
+
+    button:hover { background-color: #475569; }
 }
 
-
-.area_forms:hover{
-    transform: translateY(-8px); 
-    box-shadow: 0 15px 40px rgba(127, 53, 170, 0.15);
-}
-
-/*ANIMAÇÃO: */
+/* ANIMAÇÕES DE SCROLL */
 @keyframes contactReveal {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-    filter: blur(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
+  from { opacity: 0; transform: translateY(30px); filter: blur(4px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
 }
 
-
-@keyframes slideInContact {
-  from {
-    opacity: 0;
-    transform: translateX(var(--slide-distance));
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.information .sobre, .information h1, .information p {
+.contatos, .formulario {
   animation: contactReveal linear forwards;
   animation-timeline: view();
-  animation-range: entry 0% cover 15%;
+  animation-range: entry 5% cover 20%;
 }
 
-
-.contatos {
-  --slide-distance: -50px; 
-  animation: slideInContact linear forwards;
-  animation-timeline: view();
-  animation-range: entry 5% cover 25%;
-}
-
-.formulario {
-  --slide-distance: 50px; 
-  animation: slideInContact linear forwards;
-  animation-timeline: view();
-  animation-range: entry 5% cover 25%;
-}
-
-
-.option, .proposta, .area_forms {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
-    
-    .information {
-        height: auto !important; 
-        padding: 15px 0;         
-        gap: 5px;  
-        text-align: center;              
-    }
+    .contatos_page { height: auto !important; }
 
-    h1 {
-        font-size: 24px;         
-        margin: 0;
-    }
-
-    
     .formas_contato {
-        height: auto !important; 
         flex-direction: column;
-        gap: 10px;               
+        align-items: center;
+        gap: 30px;
     }
 
-    
-    .contatos {
-        width: 100% !important;
-        height: auto !important; 
-        padding: 10px 0;         
-        justify-content: flex-start; 
+    .contatos, .formulario {
+        width: 90% !important;
+        height: auto !important;
     }
 
-    
-    .formulario {
-        width: 100%;
-        height: auto ; 
-        padding: 10px 0;         
-        gap: 10px;
-        text-align: center;
-    }
-
-    
-    .option, .proposta, .area_forms {
-        width: 90%;
-        min-height: auto; 
-        padding: 15px;               
-        margin-bottom: 10px;
-    }
-
-    .area_forms {
-        height: auto; 
-        padding: 15px;
-        gap: 10px;
-    }
+    .formulario h1 { font-size: 28px; }
+    .area_forms { width: 100%; }
 }
