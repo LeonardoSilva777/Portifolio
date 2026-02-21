@@ -62,7 +62,7 @@ export default function Contato() {
                             <strong>Mensagem: </strong>
                             <textarea name="message" placeholder="Mensagem"></textarea>
                             <input type="hidden" name="_captcha" value="false"></input>
-                            <input type="hidden" name="_next" value="portifolio-omega-sand-40.vercel.app"></input>
+                            <input type="hidden" name="_next" value="https://portifolio-omega-sand-40.vercel.app"></input>
 
                             <button type="submit">Enviar</button>
                         </form>
