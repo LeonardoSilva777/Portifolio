@@ -3,7 +3,7 @@ import { CodeXml, Palette, Rocket, Zap } from 'lucide-react';
 
 export default function Sobre() {
     return (
-        <section className={Style.section_sobre}>
+        <section id="Sobre" className={Style.section_sobre}>
             <div className={Style.infos}>
                 <p className={Style.sobre}>Sobre mim</p>
                 <h1>Desenvolvedor <span className={Style.span_gradiente}>Full Stack</span></h1>

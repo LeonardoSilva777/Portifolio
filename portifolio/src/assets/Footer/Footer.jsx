@@ -10,13 +10,13 @@ export default function Footer() {
                     <p>Desenvolvedor Full Stack apaixonado por criar experiências digitais únicas.</p>
                 </div>
                 <div className={Style.redes}>
-                    <a href="#">
+                    <a href="https://github.com/LeonardoSilva777">
                         <Github color="rgb(255, 255, 255)" size={28} />
                     </a>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/devleonardosilva/">
                         <Linkedin color="rgb(255, 255, 255)" size={25} />
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/leroo_leo/">
                         <Instagram color="rgb(255, 255, 255)" size={28} />
                     </a>
                     

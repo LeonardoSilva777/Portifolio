@@ -1,18 +1,12 @@
 import Style from '../HeroSection/Hero.module.css'
-import {
-    Github,
-    Linkedin,
-    Instagram,
-    Sparkles,
-    CodeXml,
-    Zap,
-    Layers
-} from 'lucide-react';
+import { Github, Linkedin, Instagram, Sparkles, CodeXml, Zap, Layers } from 'lucide-react';
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 
 export default function Hero() {
     return (
-        <section className={Style.section_hero}>
+        <section id="Hero" className={Style.section_hero}>
             <div className={Style.proposta}>
                 <Sparkles color="#7e22ce" size={25} />
                 <p>Disponivel para novos projetos</p>
@@ -38,18 +32,24 @@ export default function Hero() {
             </div>
 
             <div className={Style.telas}>
-                <button className={Style.projetos}>Ver Projetos</button>
-                <button className={Style.contato}>Entrar em contato</button>
+                <Link smooth to="#Projetos" className={Style.projetos}>
+                    Ver Projetos
+                </Link>
+
+            
+                <Link smooth to="#Contatos" className={Style.contato}>
+                    Entrar em contato
+                </Link>
             </div>
 
             <div className={Style.redes}>
-                <a href="https://github.com/seu-usuario" target="_blank" rel="noreferrer">
+                <a href="https://github.com/LeonardoSilva777" target="_blank" rel="noreferrer">
                     <Github color="#7e22ce" size={35} />
                 </a>
-                <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/devleonardosilva/" target="_blank" rel="noreferrer">
                     <Linkedin color="#7e22ce" size={35} />
                 </a>
-                <a href="#" target="_blank" rel="noreferrer">
+                <a href="https://www.instagram.com/leroo_leo/" target="_blank" rel="noreferrer">
                     <Instagram color="#7e22ce" size={35} />
                 </a>
             </div>

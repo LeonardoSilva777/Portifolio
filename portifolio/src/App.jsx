@@ -6,19 +6,22 @@ import Nav from './assets/Nav/Nav.jsx'
 import Projetos from './assets/Projetos/Projetos.jsx'
 import Skills from './assets/Skills/Skills.jsx'
 import Sobre from './assets/Sobre/Sobre.jsx'
+import { BrowserRouter } from 'react-router-dom';
+
 function App() {
   return (
-    <main>
-      <Nav />
-      <Hero />
-      <Sobre />
-      <Skills />
-      <Projetos />
-      <Contato />
-      <Footer /> 
+    <BrowserRouter>
+      <main>
+        <Nav />
+        <Hero />
+        <Sobre />
+        <Skills />
+        <Projetos />
+        <Contato />
+        <Footer />
+      </main>
 
-      
-    </main>
+    </BrowserRouter>
 
   )
 

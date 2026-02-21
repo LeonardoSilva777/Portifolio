@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Contato() {
     return (
-        <section className={Style.contatos_page}>
+        <section id="Contatos" className={Style.contatos_page}>
             <header className={Style.information}>
                 <div className={Style.sobre}>Contato</div>
                 <h1>Vamos <span className={Style.span_gradiente}>Conversar?</span></h1>

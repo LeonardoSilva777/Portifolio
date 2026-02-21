@@ -4,7 +4,7 @@ import Style from '../Skills/Skills.module.css'
 export default function Skills() {
     return (
 
-        <main className={Style.Skills_page}>  {/*Pagina*/}
+        <main id="Skills" className={Style.Skills_page}>  {/*Pagina*/}
             <header className={Style.info}>
                 <div className={Style.sobre}>Hard/Softs Skills</div>
                 <h1>Minhas <span>Skills</span></h1>

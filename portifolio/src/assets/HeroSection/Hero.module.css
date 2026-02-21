@@ -47,6 +47,7 @@
     gap: 10px;
     border-radius: 50px;
     border: 1px solid rgb(232, 232, 232);
+    color: #7F35AA;
 
     p{
         font-size: 15px;
@@ -166,25 +167,46 @@
     justify-content: space-around;
     align-items: center;
 
-    .projetos{
+    .projetos, .contato {
+        text-decoration: none; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .projetos {
         width: 170px;
         height: 60px;
         border-radius: 20px;
         font-size: 16px;
-        background:  linear-gradient(135deg, #7015f8 0%, #13e4ff 100%); 
+        background: linear-gradient(135deg, #7015f8 0%, #13e4ff 100%); 
         color: white;
         font-weight: 600;
     }
 
-    .contato{
+    .contato {
         width: 200px;
         height: 60px;
         border-radius: 20px;
         font-size: 16px;
         background-color: white;
         border: 1px solid black;
+        color: #0D2F3F; 
         font-weight: 400;
     }
+}
+
+.projetos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(112, 21, 248, 0.4);
+}
+
+.contato:hover {
+    transform: translateY(-5px);
+    border-color: #7F35AA;
+    color: #7F35AA;
 }
 
 .redes {
@@ -205,6 +227,7 @@
         background: linear-gradient(130deg, #ffffff 50%, hsl(185, 83%, 81%) 100%);
     }
 }
+
 
 /*Animação*/
 @keyframes heroReveal {

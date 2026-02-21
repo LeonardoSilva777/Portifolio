@@ -35,22 +35,63 @@
 .Nav a {
     color: white;
     text-decoration: none;
+    transition: all 0.3s
 }
 
+.Nav a:hover {
+    color: #2FC3E4; 
+    transform: translateY(-2px); 
+}
+
+
+.Nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, #7F35AA, #2FC3E4);
+    transition: width 0.3s ease;
+}
+
+.Nav a:hover::after {
+    width: 100%;
+}
+
+.link_ativo {
+    color: #2FC3E4;
+    font-weight: bold;
+}
+
+
 .curriculo_buttom {
-    width: 180px;
+
+    width: 160px;
     height: 40px;
     background-color: #23C7C7;
-    color: white;
-    border: none;
+    color: white !important; 
+    border-radius: 8px; 
+    font-weight: 600;
+    font-size: 14px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; 
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.curriculo_buttom:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(35, 199, 199, 0.3);
 }
 
 .curriculo_buttom_mobile {
     display: none;
 }
 
-/*Menu hamburguer no tamanho do monitor*/
 .menu_icon {
     display: none;
     z-index: 110;
@@ -98,15 +139,34 @@
     .Nav a {
         padding: 15px 30px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s
     }
 
+    
+
     .curriculo_buttom_mobile {
-        display: block;
-        width: 160px;
-        height: 40px;
-        margin: 20px 0 0 30px;
+        display: flex; 
+        width: 200px;
+        height: 45px;
         background-color: #23C7C7;
         color: white;
-        border: none;
+        margin: 20px 0 0 30px;
+        border-radius: 5px;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
     }
+
+    .Nav a:active {
+        color: #2FC3E4;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .Nav {
+        height: auto; 
+        padding-bottom: 30px;
+    }
+
 }
+
