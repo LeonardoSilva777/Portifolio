@@ -36,12 +36,18 @@
         align-items: center;
         border-radius: 30px;
         color: #7F35AA;
+       
+    }
+
+    h1{
+         padding-left: 30px;
     }
 
     p {
         color: #64748b;       
         font-size: 1.1rem;
         margin-top: 10px;
+         padding-left: 30px;
     }
 }
 
